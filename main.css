@@ -44,11 +44,8 @@ body{
     align-items:center;
 }
 
-.nav-links{
+.nav-bar{
     display:none;
-    gap:1.5em;
-    font-family:'Barlow',sans-serif;
-    text-transform:capitalize;
 }
 
 ul{
@@ -66,12 +63,11 @@ h1{
     text-transform:uppercase;
     font-size:2.3em;
     letter-spacing:.4rem;
-    margin-top:2em;
+    margin:2em 0 2.5em 0;
 }
 
 .arrow{
     height:150px;
-    margin-top:6em;
 }
 
 /*image groupe section*/
@@ -225,19 +221,26 @@ h1{
 
 .bottom-section{
     background-color:#90d4c5;
-    padding:3em 2em;
+    padding:4em 2em;
 }
 
-.bottom-section img{
-    color:var(--footer);
-    margin-bottom:1.5em;
+.bottom-section .bottom-logo{
+    margin-bottom:2em;
+    width:11.25rem;
+}
+
+.bottom-section .test{
+    font-family:'Barlow', sans-serif;
+    font-weight:bold;
+    font-size:3rem;
 }
 
 .bottom-section .bottom-nav{
     display:flex;
     justify-content:space-between;
     font-family:'Barlow',sans-serif;
-    margin-bottom:4em;
+    margin:0 auto 4em auto;
+    width:min(100%,350px);
 }
 
 .bottom-section .bottom-nav a{
@@ -247,10 +250,135 @@ h1{
 
 .bottom-section .icons{
     display:flex;
-    width:11.25em;
+    width:10em;
     margin:auto;
     justify-content:space-between;
 }
+
+/*media query width 700px*/
+
+@media(min-width:700px){
+    .hero-image{
+        background-image:url('images/desktop/image-header.jpg');
+    }
+
+    .nav-bar{
+        display:block;
+    }
+
+    .nav-links{
+        display:flex;
+        align-items:center;
+        gap:2em;
+        font-family:'Barlow',sans-serif;
+        text-transform:capitalize;
+    }
+
+    .nav-links button{
+        padding:1em 2em;
+        font-family:'Fraunces',sans-serif;
+        border:none;
+        border-radius:2em;
+    }
+
+    .hero-image .menu{
+        display:none;
+    }
+
+    h1{
+        font-size:3em;
+    }
+
+    /*main images groupe section*/
+    .images-groupe {
+        display:grid;
+        align-items:center;
+        grid-template-areas:
+        '. egg'
+        'cup .'
+        'cherry orange';
+    }
+    
+    .images-groupe .feature{
+        text-align:left;
+    }
+
+    .images-groupe img{
+        object-fit:cover;
+    }
+
+    .images-groupe .egg{
+        content:url("images/desktop/image-transform.jpg");
+        grid-area:egg;
+    }
+
+    .images-groupe .cup{
+        content:url("images/desktop/image-stand-out.jpg");
+    }
+
+    .images-groupe .two-cherry{
+        content:url("images/desktop/image-graphic-design.jpg");
+    }
+
+    .images-groupe .one-orange{
+        content:url("images/desktop/image-photography.jpg");
+    }
+
+    .feature{
+        padding:3.5em 6em;
+    }
+
+    /*testimonials section*/
+    .testimonials{
+        width:min(1200px,100%);
+        margin:auto;
+    }
+
+    .testimonials .testimonial-container{
+        display:flex;
+        gap:1em;
+    }
+
+    .testimonials{
+        padding:10em 0em;
+    }
+
+    /*bottom section footer*/
+
+    .footer-images{
+        grid-template-columns:repeat(4,1fr);
+    }
+
+    .footer-images .milk{
+        content:url('images/desktop/image-gallery-milkbottles.jpg');
+    }
+
+    .footer-images .platte{
+        content:url('images/desktop/image-gallery-orange.jpg');
+    }
+
+    .footer-images .corne{
+        content:url('images/desktop/image-gallery-cone.jpg');
+    }
+
+    .footer-images .sugar{
+        content:url('images/desktop/image-gallery-sugarcubes.jpg');
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

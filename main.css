@@ -258,6 +258,10 @@ h1{
 /*media query width 700px*/
 
 @media(min-width:700px){
+    
+}
+
+@media(min-width:1024px){
     .hero-image{
         background-image:url('images/desktop/image-header.jpg');
     }
@@ -293,27 +297,24 @@ h1{
     .images-groupe {
         display:grid;
         align-items:center;
+        grid-template-columns:repeat(2,1fr);
         grid-template-areas:
-        '. egg'
-        'cup .'
-        'cherry orange';
+        '. A'
+        'B .';
     }
     
     .images-groupe .feature{
         text-align:left;
     }
 
-    .images-groupe img{
-        object-fit:cover;
-    }
-
     .images-groupe .egg{
         content:url("images/desktop/image-transform.jpg");
-        grid-area:egg;
+        grid-area:A;
     }
 
     .images-groupe .cup{
         content:url("images/desktop/image-stand-out.jpg");
+        grid-area:B;
     }
 
     .images-groupe .two-cherry{
@@ -326,6 +327,15 @@ h1{
 
     .feature{
         padding:3.5em 6em;
+    }
+
+    .bottom-images .text-content{
+        left:50%;
+        transform:translateX(-50%);
+    }
+
+    .bottom-images .text-content p{
+        max-width:21.8em;
     }
 
     /*testimonials section*/
@@ -349,6 +359,10 @@ h1{
         grid-template-columns:repeat(4,1fr);
     }
 
+    .footer-images img{
+        object-fit:fill;
+    }
+
     .footer-images .milk{
         content:url('images/desktop/image-gallery-milkbottles.jpg');
     }
@@ -357,7 +371,7 @@ h1{
         content:url('images/desktop/image-gallery-orange.jpg');
     }
 
-    .footer-images .corne{
+    .footer-images .cone{
         content:url('images/desktop/image-gallery-cone.jpg');
     }
 

@@ -161,5 +161,15 @@
         </div>
       </footer>
     </div>
+    <script>
+      const menu = document.querySelector(".menu");
+      const nav = document.querySelector(".nav-bar");
+      menu.addEventListener("click", () => {
+        nav.classList.add("show-nav");
+      });
+      window.addEventListener("scroll", () => {
+        nav.classList.remove("show-nav");
+      });
+    </script>
   </body>
 </html>

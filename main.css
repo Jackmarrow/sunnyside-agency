@@ -54,6 +54,7 @@ body{
     padding:2em 0;
     visibility:hidden;
     opacity:0;
+    transition:all 500ms;
 }
 
 .show-nav{
@@ -263,8 +264,6 @@ h1{
     margin-bottom:2em;
     width:11.25rem;
 }
-
-
 
 .bottom-section .test{
     font-family:'Barlow', sans-serif;
